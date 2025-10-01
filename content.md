@@ -1,4 +1,4 @@
-## A subreddit for PDF2CBT
+### A subreddit for PDF2CBT
 
 As asked by some, I have made a subreddit, [r/PDF2CBT](https://www.reddit.com/r/PDF2CBT/).
 
@@ -8,7 +8,7 @@ I will also be sharing features I will/am working on so that I can let you all k
 
 ---
 
-## (Under Development) Text Pattern Based Auto Crop for PDF Cropper
+### (Under Development) Text Pattern Based Auto Crop for PDF Cropper
 
 This is a feature I have been working on for weeks and finally it will be released today (1st oct) or tomorrow (2nd oct)!
 (A video showing it in action is below)
