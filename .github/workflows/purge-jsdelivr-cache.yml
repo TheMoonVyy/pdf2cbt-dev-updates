@@ -1,0 +1,14 @@
+name: Purge jsDelivr Cache
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  purge_cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr Cache for content.md
+        run: |
+          curl https://purge.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/content.md
