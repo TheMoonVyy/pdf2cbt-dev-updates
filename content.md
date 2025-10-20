@@ -1,3 +1,14 @@
+### Upcoming features
+
+1. Add a ```Re-evaluate Results``` menu option to tests in ```My Tests``` on the ```Test Results``` page. This will allow you to re-evaluate a test using a different (new or updated) answer key, which is helpful if you made a mistake in the original key and want to recheck the test with the correct one.
+
+2. Add a ```Shuffle Questions``` button inside the ```Test Interface``` to shuffle questions within their respective sections.
+
+3. Add an ```Instructions panel``` to the ```Test Interface```, similar to real exams, showing marking schemes, rules, and other information. This will not only make it feel more like the real exam but also for exam formats like JEE Advanced where question rules/instructions varies. For example, there are sections which say that answer should be an integer from 0 to 9.
+ - This feature will be achived through templates with placeholder variables inside it that will be replaced with actual data (total questions, correct marks, max marks, incorrect marks, questions type, etc).
+ - We can choose the template (or create a custom one) after the PDF Croppering process (but before generating test zip). As the ```PDF Cropper``` page won't be just about PDF Cropper, I will be renaming it to ```Test Maker``` page with PDF Cropper, instruction adder etc in it. Naming it to ```Test Maker``` will also make it easy for new users to understand what it is for.
+
+---
 ### A subreddit for PDF2CBT
 
 As asked by some, I have made a subreddit, [r/PDF2CBT](https://www.reddit.com/r/PDF2CBT/).
@@ -5,28 +16,3 @@ As asked by some, I have made a subreddit, [r/PDF2CBT](https://www.reddit.com/r/
 This is a subreddit for discussing, sharing, and helping each other with PDF2CBT.
 
 I will also be sharing features I will/am working on so that I can let you all know and get some opinion/feedback during development of that feature
-
----
-
-### (Under Development) Text Pattern Based Auto Crop for PDF Cropper
-
-This is a feature I have been working on for weeks and finally it will be released today (1st oct) or tomorrow (2nd oct)!
-(A video showing it in action is below)
-
-The current PDF Cropper's process is manual, it requires users to manually crop the questions.
-Manual cropping made it possible to crop a wide range of PDF formats but its strength is also its weakness, it is tedious to manually crop.
-
-To solve this problem, we can make use of text patterns in the PDF to determine the location of questions.
-This is what Pattern Based Cropper is for, but for this, we need know what the patterns are and instead of going with a big general case of patterns, we can go with specific patterns for a given pdf format.
-
-With this in mind, I came up with this **config based approach**, where you create a pattern config first and use it to crop pdfs following that config (which will be the case if pdf is created by same people and they are using same template/format).
-I have added a lot of options to the config for flexibility.
-
-I will be providing some popular pattern configs for users to select from (and create a new one based on it if needed) and if you want to include more in the list you can let me know.
-
-Here's the video showing how the config looks and pattern based cropper in action (explanations will be there when it is released (in instructions/docs and in video)).
-
-@[youtube](SKwI29w3c3U)
-
-
-Feel free to share your thoughts by commenting in this [github discussion](https://github.com/TheMoonVyy/pdf2cbt/discussions/122) or this [reddit post](https://www.reddit.com/r/PDF2CBT/comments/1nv141x/text_pattern_based_auto_crop_for_pdf_cropper/).
