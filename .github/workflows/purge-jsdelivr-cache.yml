@@ -4,11 +4,24 @@ on:
   push:
     branches:
       - main
+    paths:
+      - version.txt
 
 jobs:
   purge_cache:
     runs-on: ubuntu-latest
     steps:
-      - name: Purge jsDelivr Cache for content.md
+      - name: Purge and Reload jsDelivr Cache
         run: |
-          curl https://purge.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/content.md
+          FILES=(
+            "content.md"
+            "version.txt"
+          )
+
+          for FILE in "${FILES[@]}"; do
+            echo "Purging cache for $FILE..."
+            curl --silent --show-error --fail "https://purge.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE"
+
+            echo "Reloading CDN for $FILE..."
+            curl --silent --show-error --fail "https://cdn.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE" > /dev/null
+          done
