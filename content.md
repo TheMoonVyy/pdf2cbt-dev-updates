@@ -5,7 +5,7 @@
 2. Add a ```Shuffle Questions``` button inside the ```Test Interface``` to shuffle questions within their respective sections.
 
 3. Add an ```Instructions panel``` to the ```Test Interface```, similar to real exams, showing marking schemes, rules, and other information. This will not only make it feel more like the real exam but also for exam formats like JEE Advanced where question rules/instructions varies. For example, there are sections which say that answer should be an integer from 0 to 9.
- - This feature will be achived through templates with placeholder variables inside it that will be replaced with actual data (total questions, correct marks, max marks, incorrect marks, questions type, etc).
+ - This feature will be achieved through templates with placeholder variables inside it that will be replaced with actual data (total questions, correct marks, max marks, incorrect marks, questions type, etc).
  - We can choose the template (or create a custom one) after the PDF Croppering process (but before generating test zip). As the ```PDF Cropper``` page won't be just about PDF Cropper, I will be renaming it to ```Test Maker``` page with PDF Cropper, instruction adder etc in it. Naming it to ```Test Maker``` will also make it easy for new users to understand what it is for.
 
 ---
