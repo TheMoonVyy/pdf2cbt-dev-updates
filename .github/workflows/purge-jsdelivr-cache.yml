@@ -6,22 +6,31 @@ on:
       - main
     paths:
       - version.txt
+  workflow_dispatch:
 
 jobs:
   purge_cache:
     runs-on: ubuntu-latest
     steps:
-      - name: Purge and Reload jsDelivr Cache
+      - name: Purge CDN cache (instant on manual, delayed on push)
         run: |
           FILES=(
             "content.md"
             "version.txt"
           )
 
+          # ping the files first
           for FILE in "${FILES[@]}"; do
-            echo "Purging cache for $FILE..."
-            curl --silent --show-error --fail "https://purge.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE"
+            curl --silent --show-error --fail "https://cdn.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE" > /dev/null
+          done
 
-            echo "Reloading CDN for $FILE..."
+          # if NOT manual run → sleep 10 mins
+          if [ "${GITHUB_EVENT_NAME}" != "workflow_dispatch" ]; then
+            sleep 600
+          fi
+
+          # purge + reload
+          for FILE in "${FILES[@]}"; do
+            curl --silent --show-error --fail "https://purge.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE"
             curl --silent --show-error --fail "https://cdn.jsdelivr.net/gh/TheMoonVyy/pdf2cbt-dev-updates@main/$FILE" > /dev/null
           done
