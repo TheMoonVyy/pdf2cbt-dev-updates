@@ -1,19 +1,19 @@
 ### Updates
 
-There have hardly been much updates to pdf2cbt ever since I joined college due to their 85% attendance criteria, homeworks, projects/courses etc.
-
-Now I have semester end exams from 13th Jan onwards till 2nd week of Feb which means I won't be able to work again in this period.
-
-I currently have Study Holidays until 13th Jan and so I have time to work on pdf2cbt now, I will working on this project from 6th to 10th of Jan so expect some updates.
+TheMoonVyy here, now that my 1st semester exams are over, I can focus on upcoming features for a week so expect updates.
 
 ---
 ### Upcoming features
-
-1. Add an ```Instructions panel``` to the ```Test Interface```, similar to real exams, showing marking schemes, rules, and other information. This will not only make it feel more like the real exam but also for exam formats like JEE Advanced where question rules/instructions varies. For example, there are sections which say that answer should be an integer from 0 to 9.
- - This feature will be achieved through templates with placeholder variables inside it that will be replaced with actual data (total questions, correct marks, max marks, incorrect marks, questions type, etc).
- - We can choose the template (or create a custom one) after the PDF Croppering process (but before generating test zip). As the ```PDF Cropper``` page won't be just about PDF Cropper, I will be renaming it to ```Test Maker``` page with PDF Cropper, instruction adder etc in it. Naming it to ```Test Maker``` will also make it easy for new users to understand what it is for.
-
+1. Currently I am working on a feature in Generate Answer Key page which will create a prompt users can copy and paste it to an AI (like chatgpt, gemini etc) along with their answer key pdf or screenshot.
+  - The prompt will prompt the AI to extract the answers from PDF/Image and provide back a json output which users will have to copy and paste it back to generate answer key.
+  - The page will then validate the answer key data and create the answer key in the format needed by PDF2CBT.
+  - The prompt and AI's output format is being designed to be minimal so that the prompt context is not lost to the AI.
+  - I have a similar idea for creating Pattern Based Cropper's Config using prompt + pdf.
 2. Add a ```Shuffle Questions``` button inside the ```Test Interface``` to shuffle questions within their respective sections.
+3. Add an ```Offset Test Duration``` option in UI Settings of Test Interface. This will visually extend the countdown timer by the given offset while keeping the real test duration unchanged.
+  - For example, if the test duration is set to 150 minutes and the offset is 30 minutes, the timer will start from 180 minutes.
+  - The countdown will run normally until it reaches 30 minutes remaining, at which point the test will automatically submit because the internal duration is still 150 minutes.
+  - This is a purely visual feature intended to create a psychological buffer without affecting actual timing or evaluation logic.
 
 ---
 ### A subreddit for PDF2CBT
