@@ -1,19 +1,9 @@
-### Updates
-
-TheMoonVyy here, now that my 1st semester exams are over, I can focus on upcoming features for a week so expect updates.
-
----
 ### Upcoming features
-1. Currently I am working on a feature in Generate Answer Key page which will create a prompt users can copy and paste it to an AI (like chatgpt, gemini etc) along with their answer key pdf or screenshot.
-  - The prompt will prompt the AI to extract the answers from PDF/Image and provide back a json output which users will have to copy and paste it back to generate answer key.
-  - The page will then validate the answer key data and create the answer key in the format needed by PDF2CBT.
-  - The prompt and AI's output format is being designed to be minimal so that the prompt context is not lost to the AI.
-  - I have a similar idea for creating Pattern Based Cropper's Config using prompt + pdf.
-2. Add a ```Shuffle Questions``` button inside the ```Test Interface``` to shuffle questions within their respective sections.
-3. Add an ```Offset Test Duration``` option in UI Settings of Test Interface. This will visually extend the countdown timer by the given offset while keeping the real test duration unchanged.
-  - For example, if the test duration is set to 150 minutes and the offset is 30 minutes, the timer will start from 180 minutes.
-  - The countdown will run normally until it reaches 30 minutes remaining, at which point the test will automatically submit because the internal duration is still 150 minutes.
-  - This is a purely visual feature intended to create a psychological buffer without affecting actual timing or evaluation logic.
+
+1. I am currently working on a feature in the Pattern-Based Cropper that records the steps the cropper takes while searching for, deciding on, and cropping questions. Using this recorded data, we will be able to preview the step-by-step actions in the UI, with speed control, to see exactly how the cropper processes each question. This will help us understand how the cropper works and why it fails to find or crop a question when it is expected to do so.
+
+
+I have postponed **Shuffle Questions** feature that was planned to be added in Test Interface. This feature is postponed so that it can be implemented alongside support for UGEE (multiple section groups, i.e., SUPR & REAP) and BITSAT (bonus section), since all of these features require modifications to the data structures of the Test Interface and Results pages.
 
 ---
 ### A subreddit for PDF2CBT
