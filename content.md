@@ -101,8 +101,8 @@ This will change in v3, as a database will be added, along with desktop and andr
     There will be a "host" who will make the test (and decide stuff related to it like test duration, settings etc) and the host can share the link to others to give that test.
     The host can choose when the test can be given (anytime or auto-starts at a specific time).
 
-    As this test is same for the group of people, the comparitive anaylsis like leaderboard, user vs toppers comparison etc can be done.
-    The host can set which comparisons can be done (for example, some might not like user a vs toppers comparison).
+    As this test is same for the group of people, the comparative analysis like rank list, user vs toppers comparison etc can be done.
+    The host can set which comparisons can be done (for example, some might not like user vs toppers comparison).
 
 
 As you can see, the features planned for v3 are big (and hence will take time).
